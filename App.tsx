@@ -23,20 +23,42 @@ import ForgotPassword from './src/ForgotPassword';
 import ResetPassword from './src/ResetPassword';
 import EnterOtp from './src/EnterOtp';
 
+import { NavigationContainer } from '@react-navigation/native';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function App() {
-
+function HomeScreen() {
   return (
-    <SafeAreaProvider>
-      <Signin />
-      {/* <ForgotPassword /> */}
-      {/* <ResetPassword /> */}
-      {/* <EnterOtp /> */}
-    </SafeAreaProvider>
-
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
   );
 }
+const Stack = createNativeStackNavigator();
 
+// function App() {
+
+//   return (
+//     <SafeAreaProvider>
+//       <NavigationContainer>
+//         <Stack.Navigator initialRouteName="Signin">
+//           <Stack.Screen name="Signin" component={Signin} />
+//         </Stack.Navigator>
+//       </NavigationContainer>
+//     </SafeAreaProvider>
+//   );
+// }
+
+const App = () => {
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Signin">
+          <Stack.Screen name="ForgotPassword" component={Signin} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+};
 export default App;

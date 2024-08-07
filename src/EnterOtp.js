@@ -60,46 +60,46 @@ function EnterOtp() {
 
 
     return (
-        <><BackgroundImage>
-
-            <View style={styles.topView}>
-                <View style={styles.imageContainer}>
-                    <Image
-                        source={require('../assets/logo.webp')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../assets/Illustration.webp')}
-                        style={styles.image}
-                    />
-                </View>
-                <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
-                    <Text style={{ textAlign: 'center', fontSize: 18, fontStyle: 'normal', marginBottom: 20, fontWeight: 'bold', color: 'black' }}>Enriching Lives, Empowering Livelihoods</Text>
-                    <CustomText
-                        text="Please enter OTP sent you on your Email"
-                        fontSize={24}
-                        color="black"
-                    />
-                    <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', paddingTop: 30 }}>
-
-                        <OTPTextInput
-                            keyboardType='number-pad'
-                            inputCount={4} // Number of OTP digits
-                            handleTextChange={handleOtpChange}
+        <>
+            <BackgroundImage>
+                <View style={styles.topView}>
+                    <View style={styles.imageContainer}>
+                        <Image
+                            source={require('../assets/logo.webp')}
+                            style={styles.image}
                         />
-
+                        <Image
+                            source={require('../assets/Illustration.webp')}
+                            style={styles.image}
+                        />
                     </View>
-                </View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
+                        <Text style={{ textAlign: 'center', fontSize: 18, fontStyle: 'normal', marginBottom: 20, fontWeight: 'bold', color: 'black' }}>Enriching Lives, Empowering Livelihoods</Text>
+                        <CustomText
+                            text="Please enter OTP sent you on your Email"
+                            fontSize={24}
+                            color="black"
+                        />
+                        <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', paddingTop: 30 }}>
 
-            </View>
-            <View style={styles.bottomView}>
-                <CustomButton
-                    title="Verify OTP"
-                    onPress={handleButtonPress}
-                    backgroundColor="#80BB1C" // Example background color
-                />
-            </View>
-        </BackgroundImage>
+                            <OTPTextInput
+                                keyboardType='number-pad'
+                                inputCount={4} // Number of OTP digits
+                                handleTextChange={handleOtpChange}
+                            />
+
+                        </View>
+                    </View>
+
+                </View>
+                <View style={styles.bottomView}>
+                    <CustomButton
+                        title="Verify OTP"
+                        onPress={handleButtonPress}
+                        backgroundColor="#80BB1C" // Example background color
+                    />
+                </View>
+            </BackgroundImage>
         </>
     );
 }

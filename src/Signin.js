@@ -57,7 +57,9 @@ function Signin() {
 
 
     return (
-        <BackgroundImage>
+        <>
+
+            {/* <BackgroundImage> */}
             <View style={styles.topView}>
                 <View style={styles.imageContainer}>
                     <Image
@@ -107,7 +109,8 @@ function Signin() {
                     backgroundColor="#80BB1C" // Example background color
                 />
             </View>
-        </BackgroundImage>
+            {/* </BackgroundImage> */}
+        </>
     );
 }
 
