@@ -35,6 +35,7 @@ function App() {
       {/* <ResetPassword /> */}
       {/* <EnterOtp /> */}
     </SafeAreaProvider>
+
   );
 }
 
