@@ -33,7 +33,7 @@ import CustomInput from './component/CustomInput';
 import BackgroundImage from './component/BackgroundImage';
 
 
-function Signin() {
+function Signin({ navigation }) {
     const [inputValue, setInputValue] = useState('');
 
     const validateEmail = (email) => {
@@ -53,13 +53,13 @@ function Signin() {
     const handleButtonPress = () => {
         // Action to be performed on button press
         console.log('Button was pressed!');
+        navigation.navigate('ResetPassword')
     };
 
 
     return (
         <>
-
-            {/* <BackgroundImage> */}
+            <BackgroundImage>
             <View style={styles.topView}>
                 <View style={styles.imageContainer}>
                     <Image
@@ -109,7 +109,7 @@ function Signin() {
                     backgroundColor="#80BB1C" // Example background color
                 />
             </View>
-            {/* </BackgroundImage> */}
+            </BackgroundImage>
         </>
     );
 }

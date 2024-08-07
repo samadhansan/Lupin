@@ -27,6 +27,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AppNavigator from './AppNavigator';
 
 function HomeScreen() {
   return (
@@ -53,11 +54,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Signin">
-          <Stack.Screen name="ForgotPassword" component={Signin} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <AppNavigator></AppNavigator>
     </SafeAreaProvider>
   );
 };
