@@ -24,21 +24,17 @@ import ResetPassword from './src/ResetPassword';
 import EnterOtp from './src/EnterOtp';
 
 
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function App() {
 
   return (
-    <SafeAreaView style={{
-      flex: 1,
-      // margin: 8
-    }}>
-      {/* <StatusBar barStyle="dark-content" /> */}
-      {/* <Signin /> */}
+    <SafeAreaProvider>
+      <Signin />
       {/* <ForgotPassword /> */}
-      <ResetPassword />
+      {/* <ResetPassword /> */}
       {/* <EnterOtp /> */}
-
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

@@ -26,12 +26,14 @@ import {
     LearnMoreLinks,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import CustomButton from '../src/component/CustomButton';
-import CustomText from '../src/component/CustomText';
-import CustomInput from '../src/component/CustomInput';
+// import CustomInput from './component/CustomInput';
+import CustomButton from './component/CustomButton';
+import CustomText from './component/CustomText';
+import CustomInput from './component/CustomInput';
+import BackgroundImage from './component/BackgroundImage';
 
 
-function ResetPassword() {
+function Signin() {
     const [inputValue, setInputValue] = useState('');
 
     const validateEmail = (email) => {
@@ -55,55 +57,57 @@ function ResetPassword() {
 
 
     return (
-        <>
+        <BackgroundImage>
             <View style={styles.topView}>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={require('../assets/lupinLogo.png')}
+                        source={require('../assets/logo.webp')}
                         style={styles.image}
                     />
                     <Image
-                        source={require('../assets/Lupin_image.png')}
+                        source={require('../assets/Illustration.webp')}
                         style={styles.image}
                     />
                 </View>
                 <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
                     <Text style={{ textAlign: 'center', fontSize: 18, fontStyle: 'normal', marginBottom: 20, fontWeight: 'bold', color: 'black' }}>Enriching Lives, Empowering Livelihoods</Text>
                     <CustomText
-                        text="Reset Password"
+                        text="Sign In"
                         fontSize={24}
                         color="black"
                     />
                     <View style={{ width: '90%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', paddingTop: 30 }}>
-
                         <CustomInput
                             value={inputValue}
                             onChangeText={handleInputChange}
-                            placeholder="New Password"
-                            iconName="lock"
-                            secureTextEntry={true}
-                            validate={validatePassword}
+                            placeholder="Enter your email"
+                            iconName="envelope"
+                            validate={validateEmail}
                         />
                         <CustomInput
                             value={inputValue}
                             onChangeText={handleInputChange}
-                            placeholder="Confirm Password"
+                            placeholder="Enter your password"
                             iconName="lock"
                             secureTextEntry={true}
                             validate={validatePassword}
                         />
                     </View>
                 </View>
-
+                <View style={{ justifyContent: 'flex-end', width: '80%' }}>
+                    <TouchableOpacity >
+                        <Text style={{ textAlign: 'right' }}>Forgot Password?</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
             <View style={styles.bottomView}>
                 <CustomButton
-                    title="Submit"
+                    title="Sign In"
                     onPress={handleButtonPress}
                     backgroundColor="#80BB1C" // Example background color
                 />
             </View>
-        </>
+        </BackgroundImage>
     );
 }
 
@@ -115,10 +119,11 @@ const styles = StyleSheet.create({
         // backgroundColor: 'red',
     },
     bottomView: {
+        width: '100%',
         padding: 20,
         height: 160, // Fixed height for the bottom view
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         // backgroundColor: '#1E90FF',
     },
     sectionContainer: {
@@ -148,4 +153,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ResetPassword;
+export default Signin;

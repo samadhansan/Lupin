@@ -27,9 +27,10 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 // import CustomInput from './component/CustomInput';
-import CustomButton from '../src/component/CustomButton';
-import CustomText from '../src/component/CustomText';
-import CustomInput from '../src/component/CustomInput';
+import CustomButton from './component/CustomButton';
+import CustomText from './component/CustomText';
+import CustomInput from './component/CustomInput';
+import BackgroundImage from './component/BackgroundImage';
 
 
 function ForgotPassword() {
@@ -56,19 +57,15 @@ function ForgotPassword() {
 
 
     return (
-        <SafeAreaView style={{
-            flex: 1,
-            margin: 8
-        }}>
-            <StatusBar barStyle="dark-content" />
+        <BackgroundImage>
             <View style={styles.topView}>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={require('../assets/lupinLogo.png')}
+                        source={require('../assets/logo.webp')}
                         style={styles.image}
                     />
                     <Image
-                        source={require('../assets/Lupin_image.png')}
+                        source={require('../assets/Illustration.webp')}
                         style={styles.image}
                     />
                 </View>
@@ -99,7 +96,10 @@ function ForgotPassword() {
                     backgroundColor="#80BB1C" // Example background color
                 />
             </View>
-        </SafeAreaView>
+
+
+        </BackgroundImage>
+
     );
 }
 
@@ -111,10 +111,11 @@ const styles = StyleSheet.create({
         // backgroundColor: 'red',
     },
     bottomView: {
+        width: '100%',
         padding: 20,
         height: 160, // Fixed height for the bottom view
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         // backgroundColor: '#1E90FF',
     },
     sectionContainer: {
