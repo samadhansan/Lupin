@@ -6,13 +6,17 @@ import ForgotPassword from './src/ForgotPassword';
 import ResetPassword from './src/ResetPassword';
 import EnterOtp from './src/EnterOtp';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Signin">
+            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+            <Stack.Navigator screenOptions={{
+                headerShown: false,
+            }} initialRouteName="Signin">
                 <Stack.Screen name="Signin" component={Signin} />
                 <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
                 <Stack.Screen name="ResetPassword" component={ResetPassword} />

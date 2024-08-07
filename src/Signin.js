@@ -55,7 +55,11 @@ function Signin({ navigation }) {
         console.log('Button was pressed!');
         navigation.navigate('ResetPassword')
     };
-
+    const handleForgotPasswordPress = () => {
+        // Action to be performed on button press
+        console.log('Button was pressed!');
+        navigation.navigate('ForgotPassword')
+    };
 
     return (
         <>
@@ -63,11 +67,11 @@ function Signin({ navigation }) {
             <View style={styles.topView}>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={require('../assets/logo.webp')}
+                            source={require('../assetes/logo.webp')}
                         style={styles.image}
                     />
                     <Image
-                        source={require('../assets/Illustration.webp')}
+                            source={require('../assetes/Illustration.webp')}
                         style={styles.image}
                     />
                 </View>
@@ -97,7 +101,7 @@ function Signin({ navigation }) {
                     </View>
                 </View>
                 <View style={{ justifyContent: 'flex-end', width: '80%' }}>
-                    <TouchableOpacity >
+                        <TouchableOpacity onPress={handleForgotPasswordPress}>
                         <Text style={{ textAlign: 'right' }}>Forgot Password?</Text>
                     </TouchableOpacity>
                 </View>

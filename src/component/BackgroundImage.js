@@ -4,7 +4,7 @@ import { ImageBackground, StyleSheet, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { width, height } = Dimensions.get('window');
-const imageBackground = require('../../assets/background.webp')
+const imageBackground = require('../../assetes/background.webp')
 
 const BackgroundImage = ({ children }) => {
     return (

@@ -35,7 +35,7 @@ import BackgroundImage from './component/BackgroundImage';
 
 
 
-function EnterOtp() {
+function EnterOtp({ navigation }) {
     const [inputValue, setInputValue] = useState('');
     const [otp, setOtp] = useState('');
 
@@ -56,6 +56,7 @@ function EnterOtp() {
     const handleButtonPress = () => {
         // Action to be performed on button press
         console.log('Button was pressed!');
+        navigation.navigate('ResetPassword')
     };
 
 
@@ -65,11 +66,11 @@ function EnterOtp() {
                 <View style={styles.topView}>
                     <View style={styles.imageContainer}>
                         <Image
-                            source={require('../assets/logo.webp')}
+                            source={require('../assetes/logo.webp')}
                             style={styles.image}
                         />
                         <Image
-                            source={require('../assets/Illustration.webp')}
+                            source={require('../assetes/Illustration.webp')}
                             style={styles.image}
                         />
                     </View>

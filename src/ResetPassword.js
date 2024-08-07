@@ -32,7 +32,7 @@ import CustomInput from './component/CustomInput';
 import BackgroundImage from './component/BackgroundImage';
 
 
-function ResetPassword() {
+function ResetPassword({ navigation }) {
     const [inputValue, setInputValue] = useState('');
 
     const validateEmail = (email) => {
@@ -52,6 +52,7 @@ function ResetPassword() {
     const handleButtonPress = () => {
         // Action to be performed on button press
         console.log('Button was pressed!');
+        navigation.navigate("Signin")
     };
 
 
@@ -61,11 +62,11 @@ function ResetPassword() {
                 <View style={styles.topView}>
                     <View style={styles.imageContainer}>
                         <Image
-                            source={require('../assets/logo.webp')}
+                            source={require('../assetes/logo.webp')}
                             style={styles.image}
                         />
                         <Image
-                            source={require('../assets/Illustration.webp')}
+                            source={require('../assetes/Illustration.webp')}
                             style={styles.image}
                         />
                     </View>
