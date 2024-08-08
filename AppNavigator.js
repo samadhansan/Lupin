@@ -8,13 +8,14 @@ import EnterOtp from './src/EnterOtp';
 import Dashboard from './src/Dashboard';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'react-native';
+import CustomStatusBar from './src/component/CustomStatusBar';
 
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
     return (
-        <NavigationContainer>
-            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+        <NavigationContainer>            
+            <CustomStatusBar backgroundColor="#ffffff" barStyle="light-content" />
             <Stack.Navigator screenOptions={{
                 headerShown: false,
             }} initialRouteName="Signin">
