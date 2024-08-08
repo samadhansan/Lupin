@@ -53,7 +53,7 @@ function Signin({ navigation }) {
     const handleButtonPress = () => {
         // Action to be performed on button press
         console.log('Button was pressed!');
-        navigation.navigate('ResetPassword')
+        navigation.navigate('Dashboard')
     };
     const handleForgotPasswordPress = () => {
         // Action to be performed on button press
